@@ -6,9 +6,19 @@ There are two different ways to input morse code. A file can be input with a mor
 The program works with morse code sentances with less than 128 words, with each morse word being less than 23 characters in length.
 Morse inputs, whether in files or user input, should be in the form "......-...-..---/.-----.-..-..-.." or ".... .. / .... --- .-- / .- .-. . / -.-- --- ..-" So, words should be seperated with '/', dots are represented with '.' and dashes with '-'.
 
+# How it works
+
+1. The program takes morse code (with words separated by '/') or a file name with the same input format
+2. Words in the sentence are separated with a delimiter and each individual word is passed onto a thread
+3. Each thread splits its assigned word into all possible morse combinations
+4. All the splittings are decoded into English words
+5. We wrote our own hash table to search through a collection of english words and all the matches are returned to the user in a readable format
+
 # How to run this program
 
-To run the program:
+To run the program use the Makefile:
+
+One thing to note is that the Makefile has some configurations that give us access to MD5 hashing through MathLAN which is our CS department's network of computers. As a result, unless you're in the Grinnell College science building using the CS department's computers, you won't be able to run the program
 
 ```
 make
