@@ -14,6 +14,10 @@ To run the program:
 make
 ```
 
+## Terminal Commands
+
+These commands are meant to run for the computers in our classroom which have access to the CS faculty folders. We needed this access because we utilize MD5 hashing for our hash table.
+
 ```
 LD_LIBRARY_PATH=/home/curtsinger/.local/lib ./morse simple
 ```
